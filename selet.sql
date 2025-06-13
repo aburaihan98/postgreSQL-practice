@@ -33,3 +33,7 @@ VALUES  ('John', 'Doe', 20, 'A', 'Math', 'john.doe@example.com', '2004-01-15', '
     ('James', 'Young', 21, 'B', 'Biology', 'james.young@example.com', '2003-02-08', 'O-', 'UK'),
     ('Emma', 'Gonzalez', 24, 'A', 'Physics', NULL, '1999-09-30', 'B+', 'Australia'),
     ('Miam', 'Wright', 19, 'C', 'Math', 'liam.wright@example.com', '2002-06-14', 'A+', 'New Zealand');
+
+SELECT * FROM students;
+
+SELECT * FROM students ORDER BY first_name ASC;

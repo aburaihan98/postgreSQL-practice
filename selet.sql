@@ -56,3 +56,9 @@ SELECT * FROM students
 SELECT * FROM students 
      WHERE  age >= 20
 
+SELECT * FROM students 
+     WHERE  country <> 'USA'
+
+
+SELECT * FROM students 
+     WHERE  age != 20 

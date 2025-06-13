@@ -30,6 +30,8 @@ ALTER TABLE person2
     DROP constraint unique_person2_user_age;
 
 
+TRUNCATE TABLE person2;
+DROP TABLE person2;
 
 
 -- INSERT into person2 VALUES(10,'mizan', 45);

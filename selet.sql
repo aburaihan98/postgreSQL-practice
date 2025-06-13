@@ -36,4 +36,23 @@ VALUES  ('John', 'Doe', 20, 'A', 'Math', 'john.doe@example.com', '2004-01-15', '
 
 SELECT * FROM students;
 
-SELECT * FROM students ORDER BY first_name ASC;
+SELECT DISTINCT country FROM students ORDER BY first_name ASC;
+
+SELECT DISTINCT country FROM students 
+
+SELECT * FROM students 
+     WHERE country = 'USA'
+
+     
+SELECT * FROM students 
+     WHERE grade = 'A' AND course = 'Math'
+
+SELECT * FROM students 
+     WHERE country = 'USA' OR country = 'Australia'
+
+SELECT * FROM students 
+     WHERE (country = 'USA' OR country = 'Australia') AND age >= 20
+
+SELECT * FROM students 
+     WHERE  age >= 20
+

@@ -32,5 +32,4 @@ ALTER TABLE person2
 
 
 
-
 -- INSERT into person2 VALUES(10,'mizan', 45);

@@ -62,3 +62,68 @@ SELECT * FROM students
 
 SELECT * FROM students 
      WHERE  age != 20 
+
+
+SELECT upper(first_name), * FROM students
+
+SELECT * FROM students
+WHERE email is NOT NULL
+
+SELECT COALESCE(email, 'Email not provided'), age FROM students
+
+SELECT * FROM students 
+      WHERE country IN('USA', 'UK')
+
+
+SELECT * FROM students 
+      WHERE country NOT IN('USA', 'UK')
+
+SELECT * FROM students 
+      WHERE age BETWEEN 19 and 23
+
+SELECT * FROM students 
+      WHERE dob BETWEEN '2000-01-01' and '2005-01-01' ORDER BY dob ASC
+
+SELECT * FROM students 
+      WHERE first_name LIKE '%ia'
+
+SELECT * FROM students 
+      WHERE first_name LIKE 'A%'
+
+SELECT * FROM students 
+      WHERE first_name LIKE '__a%'
+
+SELECT * FROM students 
+      WHERE first_name LIKE '__a_'
+
+SELECT * FROM students 
+      WHERE first_name ILIKE 'a%'
+
+SELECT * FROM students 
+      LIMIT 5
+
+SELECT * FROM students 
+    WHERE country IN('USA', 'UK')  LIMIT 5
+
+SELECT * FROM students 
+    WHERE country IN('USA', 'UK')  LIMIT 2 OFFSET 2
+
+SELECT * FROM students 
+    LIMIT 5 OFFSET 5 * 0
+
+SELECT * FROM students 
+    LIMIT 5 OFFSET 5 * 1
+
+SELECT * FROM students 
+    LIMIT 5 OFFSET 5 * 2
+
+SELECT * FROM students 
+
+DELETE FROM students 
+    WHERE age = 20
+
+SELECT * FROM students 
+
+UPDATE students 
+    SET email = 'update@email.com', age = 30
+    WHERE age = 19

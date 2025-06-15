@@ -15,13 +15,10 @@ INSERT INTO "user"(user_name) VALUES
 CREATE TABLE "post" (
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
-    -- user_id INTEGER REFERENCES "user"(id) ON DELETE CASCADE
-    -- user_id INTEGER REFERENCES "user"(id) ON DELETE set NULL
-    user_id INTEGER REFERENCES "user"(id) ON DELETE set DEFAULT DEFAULT 1
-)
+    user_id INTEGER REFERENCES "user"(id) 
+    )
 
--- ALTER TABLE "post"
---       ALTER COLUMN user_id SET NOT NULL
+
 
 INSERT INTO "post"(title, user_id) VALUES
                                 ('Enjoying a sunny day with Akash! ☀️', 2),
@@ -37,5 +34,14 @@ DROP Table post
 
 DROP Table "user"
 
-DELETE FROM "user"
-       WHERE id = 4
+SELECT * FROM post
+JOIN "user" ON post.user_id = "user".id 
+
+INSERT INTO post (id, title, user_id) VALUES
+                 (5, 'This is testing title', NULL)
+
+SELECT * FROM post
+LEFT JOIN "user" ON post.user_id = "user".id 
+
+SELECT * FROM post
+RIGHT OUTER JOIN "user" ON post.user_id = "user".id 

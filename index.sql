@@ -44,3 +44,5 @@ EXPLAIN ANALYZE
 SELECT * FROM ind_table
 WHERE employee_name = 'Mia Roberts';
 
+CREATE INDEX ind_employee_name
+ON ind_table(employee_name)

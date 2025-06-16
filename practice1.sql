@@ -58,3 +58,12 @@ INSERT INTO departments (department_name) VALUES
     ('Nathan Rivera', 9, 74000.50, '2020-07-15'),
     ('Mia Roberts', 10, 70000.25, '2021-11-20');
 
+SELECT * FROM employees
+JOIN departments ON employees.department_id = departments.department_id
+
+SELECT * FROM employees
+JOIN departments USING(department_id)
+
+SELECT department_name, round(avg(salary)) FROM employees
+JOIN departments USING(department_id)
+GROUP BY department_name

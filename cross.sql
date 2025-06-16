@@ -19,4 +19,11 @@ INSERT INTO departments VALUES (102, 'Marketing');
 
 
 SELECT * from employees;
+
 SELECT * from departments;
+
+SELECT * FROM employees
+CROSS JOIN departments
+
+SELECT * FROM employees
+NATURAL JOIN departments
